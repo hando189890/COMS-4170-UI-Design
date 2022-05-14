@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>  
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+<div id = 'content'>
+
+
+<div class = "center">
+    <h2>
+        Selected a Definition for more details
+    </h2>
+</div>
+
+<div class = "empty_container"></div>
+
+<div class = "row">
+    <div class="col-md-4">
+        <div id="explore_1"> 
+            <a href='http://127.0.0.1:5000/view/1'><button class="gbutton glow_button">Receivables</button></a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="explore_2"> 
+            <a href='http://127.0.0.1:5000/view/2'><button class="gbutton glow_button">Inventory</button></a>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div id="explore_3"> 
+            <a href='http://127.0.0.1:5000/view/3'><button class="gbutton glow_button">Property Plant & Equipment</button></a>
+        </div>
+    </div>
+</div>
+</div>
+
+<div id = "next_containe">
+    <a href = "http://127.0.0.1:5000/directory"><button id="next_prev_buttons" >Directory</button></a>
+    <a href = "http://127.0.0.1:5000/learn2"><button id="next_prev_buttons" >Next</button></a>
+
+</div>
+
+{% endblock %}

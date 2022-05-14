@@ -1,0 +1,102 @@
+#hello_div{
+    padding-top:  10px;
+    padding-bottom:  10px;
+    color: blue;
+}
+
+#ll1{
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.summary{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.height{
+    margin-top: 10px;
+    font-size: 16px;
+    color: green;
+
+}
+
+.weapons{
+    margin-top: 10px;
+    font-size: 16px;
+    color: red
+}
+
+.creator{
+    margin-top: 10px;
+    font-size: 16px;
+    color: sandybrown
+}
+
+.name{
+    margin-top: 10px;
+    font-size: 26px;
+    font-weight: bold;
+    color: black
+}
+
+.real{
+    margin-top: 5px;
+    font-size: 22px;
+    color: black
+}
+
+
+.cre{
+    margin-left: 5px;
+}
+
+.wea{
+    margin-left: 5px;
+}
+
+.initial{
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.mn1{
+    /* float: right; */
+    margin-left: 90px;
+    font-size: 22px;
+    color:burlywood;
+    font-weight: bold;
+}
+
+.ptc1{
+    width: 500px;
+    margin-top: 50px
+}
+
+.introduction{
+    float: right; 
+    width: 300px
+}
+
+.maintu{
+    height: 500px
+}
+
+.mainview{
+    background: antiquewhite;
+    width: 1200px;
+    height: 900px
+}
+
+.viewpic{
+    margin-top: 70px;
+    margin-left: 50px
+}
+
+.viewprofile{
+    margin-top: 40px;
+    width: 300px;
+    height: 500px;
+    float: right;
+}
+

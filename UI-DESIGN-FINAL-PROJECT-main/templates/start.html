@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+<div id='content'>
+
+
+<div id="page_title">
+        Time for a Final Quiz!
+</div>
+
+<div id="text_content">
+    For each of the problem, you only have one chance !
+</div>
+
+<div id="text_content">
+    Once started, you can only review what you have done after finishing all problems !
+</div>
+
+
+
+
+<div>
+    <a href="/quiz/1">
+        <button id="style_buttons">Start Quiz</button>
+    </a>
+</div>
+
+
+
+
+    {% endblock %}

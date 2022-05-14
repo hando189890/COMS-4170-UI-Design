@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" crossorigin="anonymous">
+    <script src=https://code.jquery.com/jquery-3.3.1.min.js crossorigin="anonymous"></script>
+    <style>
+    #l1{
+        margin-top: 35px;
+        margin-left: 30px;
+        font-size: 20px;
+    }
+
+    .l2{
+        margin-left: 30px;
+    }
+
+    .l3{
+        margin-top: 5px;
+        margin-left: 30px;
+    }
+    #l4{
+        margin-top: 60px;
+        margin-left: 30px;
+        font-size: 24px;
+    }
+
+    .p1{
+        margin-left: 30px;
+        color: grey;
+    }
+
+    .p1{
+        margin-left: 30px;
+        color: red;
+    }
+
+    .post{
+        width: 500px;
+        border: 1px solid grey;
+    }
+
+    .f1{
+        font-weight: bold;
+    }
+    
+   .fixedbutton {
+        position: fixed; 
+        left: 60px;
+    }
+
+
+    </style>
+
+    <script>
+       
+        $(document).ready(function(){
+               change();
+               
+                $("#inputBox").keyup(function(){
+                    change();
+
+                }) 
+
+                $("#counter").click(function() {
+                    CreatePost()
+                    change();
+                }) 
+
+                $(document).keypress(function(e) {
+                    let unicode= event.which;
+                    if(unicode == '13') {
+                        event.preventDefault();
+                        CreatePost();
+                        change();
+                    }
+                    
+                });
+
+        })
+
+        function CreatePost(){
+                let input = $("#inputBox").val(); 
+
+                let track = 0;
+                for (let i = 0; i<input.length; i++){
+                    if(input[i] !=" "){
+                        track = 1;
+                        break;
+                    }
+
+                }
+
+                if (input.length <= 30){
+
+                
+                    if (track == 1){
+
+                        $("#update").prepend("<div class=\"post\"> <i class=f1>chilton </i>" + "&nbsp"+ input + "</div>");
+                        //link https://www.w3schools.com/html/html_formatting.asp
+                        //link https://www.w3schools.com/jquery/html_prepend.asp
+                    }
+
+                    document.getElementById("inputBox").value=""
+                    //link https://stackoverflow.com/questions/14837466/clearing-a-text-field-on-button-click/14837552
+                }
+
+                $("#inputBox").focus();
+                //link https://stackoverflow.com/questions/2127221/move-cursor-to-the-beginning-of-the-input-field
+
+
+        }
+
+        
+        
+        
+        function change(){
+                let input = $("#inputBox").val();   
+                if((30-input.length) >= 0){
+                    $("#style").css("color", "lightgrey")
+                    $("#counter").css("background-color", "white");
+                    $("#style").text(30-input.length);
+                    $("#counter").prop("disabled", false);
+                }else{
+                    $("#style").css("color", "red")
+                    $("#counter").css("background-color", "grey");
+                    $("#style").css("font-weight", "bold")
+                    $("#style").text(30-input.length);
+                    $("#counter").prop("disabled", true);
+                }
+                 //link https://stackoverflow.com/questions/65569376/why-is-my-jquery-function-call-not-working
+                 //link https://stackoverflow.com/questions/46566019/css-button-set-to-unclickable/46566083
+                 //link https://stackoverflow.com/questions/9767521/count-and-display-number-of-characters-in-a-textbox-using-javascript
+        
+        }
+        
+       
+
+    </script>
+
+</head>
+
+<body>
+    <form>
+        <div>
+            <label for="uname" id = "l1">Write a tweet</label><br>
+            <input type="text" id="inputBox" class="l2" name="name" size = "40"><br>
+        </div>
+    </form> 
+    
+    <div class="l3">
+        <span id="style"></span>
+        <button id = "counter"  class = "fixedbutton" >Post Tweet</button>
+    </div>
+
+    <div id="l4">POSTS </div>
+    <div id="update" class = "l2"></div>
+    
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'homepage.js') }}"></script>
+    
+<script>
+    let data = {{data|tojson}} 
+    console.log(data)
+</script>
+    <img src="https://i.redd.it/odjupdm1rel81.png" alt="maintu" width="100%">
+
+<!-- <img src="https://i.redd.it/odjupdm1rel81.png" alt="pic"> -->
+<b class = "initial">The most popular Marvel Heroes for this Week !</b><br>
+<b>Make selection of your favorite !</b>
+
+<!-- <div id = "hlist"> -->
+<div class="introduction">
+Marvel Comics is the brand name and primary imprint of Marvel Worldwide Inc., formerly Marvel Publishing, Inc. and Marvel Comics Group, a publisher of American comic books and related media. In 2009, The Walt Disney Company acquired Marvel Entertainment, Marvel World wide's parent company. <br>
+<br>
+Marvel counts among its such well-known Super Heroes as Spider-Man, Iron Man Captain America, Hulk and Black Widow, as well as popular superhero teams such as the Avengers, the X-Men, the Fantastic Four and the Guardians of Galaxy. Most of Marvel's fictional characters operate in a single reality known as the Marvel Universe, with most locations mirroring real-life places; many major characters are based in New York City.<br>
+<br>
+This website introduces some of the most popular heroes in this week, make your selection to view more detail description!</div>
+
+<div class="maintu" id="hlist">
+   
+</div>
+    </a>
+</div>
+<!-- </div> -->
+
+{% endblock %}
+

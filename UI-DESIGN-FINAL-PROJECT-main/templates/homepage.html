@@ -1,0 +1,54 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<!-- jquery -->
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'learn.js') }}"></script>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="{{url_for('static', filename='main.css')}}">
+<div class= row>  
+    <div class="col-md-6">
+        <div id = 'content'>
+
+
+            <div id="page_title">
+                    Analyzing Balance Sheet
+            </div>
+
+            <div id="text_content">
+                Learn how to analyze a balance sheet via this interactive app! 
+            </div>
+
+            <div>
+                <a href="/directory">
+                    <button id="style_buttons" href="/directory">Start Studying</button>
+                </a>
+            </div>
+
+            <div>
+                <a href="/start">
+                    <button id="style_buttons"  href="/start">Ready for Quiz?</button>
+
+                </a>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="col-md-6">
+        <div id="pic"> 
+            <a href='https://postimg.cc/r09SVkgN' target='_blank'><img src='https://i.postimg.cc/r09SVkgN/download-1.jpg' width="400" height="500" margin-top="20px" border="25" alt='download-1'/></a>
+        </div>
+     </div>
+    
+</div>  
+
+{% endblock %}

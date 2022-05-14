@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'edit.js') }}"></script>
+<script>
+    let data = {{data|tojson}}
+    console.log(data)
+</script>
+
+<form action="/update/{{ data[0].id }}" method="post">
+<div>
+
+  <div class="form-group">
+    <label for="name">Name<a style="margin-left: 20px" href="#" onclick="removeAttr('name')">edit</a></label>
+    <input type="text" class="form-control" id="name" name="name" disabled="false" placeholder="input name">
+
+  </div>
+  <div class="form-group">
+    <label for="name">Real Name <a style="margin-left: 20px" href="#" onclick="removeAttr('realName')">edit</a></label>
+    <input type="text" class="form-control" id="realName" name="realName" disabled="false" placeholder="input Real Name">
+  </div>
+    <div class="form-group">
+    <label for="name">Image Link <a style="margin-left: 20px" href="#" onclick="removeAttr('imageLink')">edit</a></label>
+    <input type="text" class="form-control" id="imageLink" name="imageLink" disabled placeholder="input ImageLink">
+  </div>
+    <div class="form-group">
+    <label for="name">Height <a style="margin-left: 20px" href="#" onclick="removeAttr('height')">edit</a></label>
+    <input type="text" class="form-control" id="height" name="height" disabled placeholder="input Height">
+  </div>
+    <div class="form-group">
+    <label for="name">Rating <a style="margin-left: 20px" href="#" onclick="removeAttr('rating')">edit</a></label>
+    <input type="number" class="form-control" id="rating" name="rating" disabled placeholder="input Rating">
+  </div>
+    <div class="form-group">
+    <label for="name">Summary <a style="margin-left: 20px" href="#" onclick="removeAttr('summary')">edit</a></label>
+    <input type="text" class="form-control" id="summary" name="summary" disabled placeholder="input Summary">
+  </div>
+    <div class="form-group">
+    <label for="name" >Weapons <a style="margin-left: 20px" href="#" onclick="removeAttr('weapons')">edit</a></label>
+    <input type="text" class="form-control" id="weapons" name="weapons" disabled placeholder="input Weapons">
+  </div>
+    <div class="form-group">
+    <label for="name">Creator <a style="margin-left: 20px" href="#" onclick="removeAttr('creator')">edit</a></label>
+    <input type="text" class="form-control" id="creator" name="creator" disabled placeholder="input creator">
+  </div>
+    
+    <button type="submit"  class="btn btn-primary" style="width: 200px;height: 50px">Submit</button>
+    <button type="button"  class="btn btn-warning" onclick="tochanges({{ data[0].id }})" style="width: 200px;height: 50px">Discard Changes</button>
+
+</div>
+</form>
+{% endblock %}
+
+
+<script>
+
+
+
+
+</script>

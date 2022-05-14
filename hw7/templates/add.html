@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<script type="text/javascript" src="{{ url_for('static', filename = 'add.js') }}"></script>
+
+  <div id="mymain"></div>
+
+  <div class="form-group">
+    <label for="name">Name</label>
+    <input type="text" class="form-control" id="name" placeholder="input name">
+  </div>
+  <div class="form-group">
+    <label for="name">Real Name</label>
+    <input type="text" class="form-control" id="realName" placeholder="input Real Name">
+  </div>
+  <div class="form-group">
+    <label for="name">Image Link</label>
+    <input type="text" class="form-control" id="imageLink" placeholder="input ImageLink">
+  </div>
+    <div class="form-group">
+    <label for="name">Height</label>
+    <input type="text" class="form-control" id="height" placeholder="input Height">
+  </div>
+    <div class="form-group">
+    <label for="name">Rating</label>
+    <input type="number" class="form-control" id="rating" placeholder="input Rating, type should be number">
+  </div>
+    <div class="form-group">
+    <label for="name">Summary</label>
+    <input type="text" class="form-control" id="summary" placeholder="input Summary">
+  </div>
+    <div class="form-group">
+    <label for="name">Weapons</label>
+    <input type="text" class="form-control" id="weapons" placeholder="input Weapons, separate by comma">
+  </div>
+    <div class="form-group">
+    <label for="name">Creator</label>
+    <input type="text" class="form-control" id="creator" placeholder="input creator, separate by comma">
+  </div>
+<button type="button" onclick="upload()" class="btn btn-primary" style="width: 200px;height: 50px">Submit</button>
+    </div>
+{% endblock %}
+
+
+<script>
+
+
+
+
+</script>

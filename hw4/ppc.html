@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PPC</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 0 200px 200px;
+        }
+
+        .top-title {
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #e8ecef;
+            border-radius: 2px;
+            padding: 50px 15px;
+            margin-bottom: 20px;
+        }
+
+        .title {
+            background-color: #aed6f1;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 20px;
+            border: 1px solid #e7e7e7;
+        }
+
+        .item {
+            border: 1px solid #e7e7e7;
+            padding: 2px 4px;
+            z-index: 200;
+        }
+
+        .item:hover {
+            cursor: move;
+            z-index: 300;
+        }
+        .active {
+            z-index: 300;
+            background-color: #fffa90;
+        }
+
+        .active1 {
+            background-color: #175b8a;
+        }
+
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="ppc.js"></script>
+</head>
+
+<body>
+    <div class="top-title">
+        Party Planning Committee
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <div id="non-ppc" class="title"> Non-PPC</div>
+            <div id="non-ppc-list">
+
+            </div>
+        </div>
+
+        <div class="col-md-2">
+            <div id="ppc" class="title"> PPC</div>
+            <div id="ppc-list">
+
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

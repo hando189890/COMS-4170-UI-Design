@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>jQuery UI Droppable - Default functionality</title>
+    <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css"> -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">  
+  
+    <style>
+        /* .draggable { width: 100px; height: 100px; padding: 0.5em; float: left; margin: 10px 10px 10px 0; }
+        .droppable { width: 150px; height: 150px; padding: 0.5em; float: left; margin: 10px; } */
+
+        .label1{
+            border: 1px solid grey;  
+            background-color: lightblue; 
+            width: 150px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px;
+            display: inline-block;
+            height: 60px;
+
+        }
+
+        .label2{
+            border: 1px solid grey;  
+            background-color: lightblue; 
+            width: 150px;
+            font-weight: bold;
+            font-size: 16px;
+            padding: 15px;
+            display: inline-block;
+            height: 60px;
+
+        }
+
+        .text{
+            border: 1px solid grey;  
+            background-color: white; 
+            width: 150px;
+            font-size: 16px;
+       }
+
+        .text:hover{
+            background-color: lightyellow;
+            cursor: crosshair;
+        }
+
+
+
+    </style>
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="dd_warmup.js"></script>
+    
+
+</head>
+
+<body>
+    <div class = "container">
+       <div class = "row">
+           <div class = "col-md-2">
+                <div class = "label1"> Non-PPC</div>
+                <div id="Phyllis" data-name = "Phyllis" class="post text"> Phyllis</div>
+                <div id="Angela" data-name = "Angela" class="post text"> Angela</div>
+           </div>
+           <br>
+           <div class = "col-md-2">
+                <div id = "droppable" class = "label2" > PPC</div>
+                <div class = "content"></div>
+           </div>
+       </div>
+
+    </div>
+ 
+    
+       
+
+ 
+</body>
+</html>

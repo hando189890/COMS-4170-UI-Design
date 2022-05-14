@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>log_sales</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 0 200px 200px;
+        }
+
+        .top-title {
+            font-size: 30px;
+            font-weight: bold;
+            background-color: #e8ecef;
+            border-radius: 2px;
+            padding: 50px 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-inline {
+            align-items: flex-start;
+        }
+
+        .client {
+            flex-basis: 30%;
+        }
+
+        .client input {
+            width: 100% !important;
+        }
+
+        .item {
+            display: flex;
+            margin: 7px 0;
+        }
+
+        .item div:nth-child(1) {
+            flex-basis: 16%;
+        }
+
+        .item div:nth-child(2) {
+            flex-basis: 32%;
+        }
+
+        .item div:nth-child(3) {
+            flex-basis: 21%;
+        }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
+    <script src="log_sales.js"></script>    
+</head>
+
+<body>
+    <div class="top-title">
+        Columbia Paper Infinity
+    </div>
+    <div>
+        <form class="form-inline" id="form"  onsubmit="return false">
+            <label class="my-2 mr-4" for="inlineFormCustomSelectPref">Long your paper sales:</label>
+            <div class="client my-2 mr-sm-4">
+                <input type="text" name="client"  class="form-control" id="client" placeholder="client" required>
+            </div>
+
+            <div class="my-2 mr-sm-4">
+                <input type="text" class="form-control " name="reams"  id="reams" placeholder="# Reams" required>
+                <div class="invalid-feedback">
+                    Please enter a number
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary my-2">Submit</button>
+        </form>
+        <div id="list">
+        </div>
+    </div>
+
+
+</body>
+
+</html>

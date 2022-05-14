@@ -1,0 +1,35 @@
+
+
+
+body {
+            padding: 0 200px 200px;
+}
+
+.top-title {
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #e8ecef;
+    border-radius: 2px;
+    padding: 50px 15px;
+    margin-bottom: 20px;
+}
+
+.form-inline {
+    align-items: flex-start;
+}
+
+       
+
+.client input {
+    width: 100% !important;
+}
+
+.item {
+    margin: 7px 0;
+}
+
+.t1{
+    font-weight: bold;
+    font-size: 30px;
+    color: red;
+}
